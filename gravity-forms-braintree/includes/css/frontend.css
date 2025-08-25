@@ -1,0 +1,110 @@
+/* Credit card container mimicking native GF credit card layout */
+.gf_braintree_cc_container {
+	position: relative;
+	padding: 12px 14px 16px;
+	border: 1px solid #d1d1d1;
+	border-radius: 4px;
+	background: #fff;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+	margin-bottom: 1rem;
+}
+
+.gf_braintree_cc_container.gfield_error {
+	border-color: #e53e3e;
+}
+
+.gf_braintree_cc_row {
+	margin-bottom: 12px;
+}
+
+.gf_braintree_cc_group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.gf_braintree_cc_cell {
+	flex: 1 1 140px;
+	min-width: 140px;
+}
+
+.gf_braintree_cc_container label {
+	display: block;
+	font-weight: 600;
+	font-size: 13px;
+	margin: 0 0 4px;
+	color: #2c3338;
+}
+
+.gf_braintree_cc_container .hosted-field {
+	position: relative;
+	height: 38px;
+	padding: 8px 10px;
+	border: 1px solid #c2c2c2;
+	background: #fafafa;
+	border-radius: 3px;
+	transition: border-color .15s, background-color .15s;
+}
+
+.gf_braintree_cc_container .hosted-field.bt-invalid {
+	border-color: #e53e3e;
+	background: #fff5f5;
+}
+
+.gf_braintree_cc_container .hosted-field:focus,
+.gf_braintree_cc_container .hosted-field.is-focused {
+	border-color: #3273dc;
+	background: #fff;
+	outline: none;
+}
+
+.bt-field-error {
+	font-size: 12px;
+	color: #e53e3e;
+	margin-top: 4px;
+	min-height: 14px;
+	line-height: 1.2;
+}
+
+.gf-braintree-errors {
+	margin-top: 4px;
+	color: #e53e3e;
+	font-size: 13px;
+}
+
+.gf_braintree_card_icons {
+	margin-top: 6px;
+	opacity: .75;
+	display: flex;
+	gap: 4px;
+}
+
+.gf_braintree_card_icons .gform_card_icon {
+	width: 32px;
+	height: 20px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	opacity: .3;
+	filter: grayscale(100%);
+	transition: opacity .2s, filter .2s;
+}
+
+.gf_braintree_card_icons .gform_card_icon_active {
+	opacity: 1;
+	filter: none;
+}
+
+/* Ensure Gravity Forms built-in icons (if loaded) look cohesive */
+.gform_card_icon_visa { background-image: url("data:image/svg+xml,%3Csvg ...visa simplified...%3C/svg%3E"); }
+.gform_card_icon_mastercard { background-image: url("data:image/svg+xml,%3Csvg ...mc...%3C/svg%3E"); }
+.gform_card_icon_amex { background-image: url("data:image/svg+xml,%3Csvg ...amex...%3C/svg%3E"); }
+.gform_card_icon_discover { background-image: url("data:image/svg+xml,%3Csvg ...discover...%3C/svg%3E"); }
+
+/* (Replace the inline SVG placeholders above with brand-safe simplified icons if desired) */
+
+/* Responsive tweak */
+@media (max-width:600px) {
+	.gf_braintree_cc_group {
+		flex-direction: column;
+	}
+}
