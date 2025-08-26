@@ -1,0 +1,10 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Gravity Forms Braintree Gateway 1.1.1\\n"
+"Content-Type: text/plain; charset=UTF-8\\n"
+"Language: \\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\\n"
+
+#: includes/class-gf-braintree-settings.php:13
+msgid "Braintree Credentials"
+msgstr ""
